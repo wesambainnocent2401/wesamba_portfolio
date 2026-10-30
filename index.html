@@ -1,217 +1,295 @@
+
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio of Wesamba Innocent, junior web and software developer.">
-  <meta name="theme-color" content="#10243A">
-  <title>Wesamba Innocent | Junior Web &amp; Software Developer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="js/script.js" defer></script>
-  <script>
-    // Apply the saved theme before the stylesheet paints.
-    (function () {
-      try {
-        const saved = localStorage.getItem("theme");
-        const prefersDark = window.matchMedia &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches;
-        document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
-      } catch (_) {
-        document.documentElement.dataset.theme = "light";
-      }
-    })();
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wesamba Innocent — Full-Stack Developer, Creative Designer and Content Creator.">
+  <meta name="theme-color" content="#101827">
+  <title>Wesamba Innocent | Developer & Creative Designer</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
-<body>
-  <nav class="nav" aria-label="Main navigation">
-    <div class="wrap">
-      <a class="logo" href="#top" aria-label="Wesamba Innocent home">W. Innocent</a>
-      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <ul id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#hire">Hire me</a></li>
-        <li><a href="#designs">Designs</a></li>
-        <li><a href="#testimonials">Reviews</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch to dark mode">
-        <span class="moon" aria-hidden="true">☾</span>
-        <span class="sun" aria-hidden="true">☀</span>
-      </button>
-    </div>
-  </nav>
 
-  <header class="hero" id="top">
-    <div class="wrap">
-      <div class="text">
-        <p class="eyebrow">HELLO, I'M</p>
-        <h1>Wesamba Innocent</h1>
-        <p class="role">Junior Web &amp; Software Developer</p>
-        <p class="lead">First-year Computer Science student at Kibabii University. I build web apps that solve real problems, and I am improving with every project.</p>
-        <div class="cta">
-          <a class="btn btn-primary" href="assets/resume.pdf" download="Wesamba-Innocent-Resume.pdf">Download resume</a>
-          <a class="btn btn-ghost" href="#hire">Hire me</a>
-        </div>
+<body>
+  <header class="header">
+    <nav class="navbar container">
+      <a href="#home" class="logo">WI<span>_DEV</span></a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation" aria-expanded="false">
+        ☰
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
       </div>
-      <div class="photo">
-        <img src="assets/profile.jpg" alt="Portrait of Wesamba Innocent" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
-        <div class="initials" aria-hidden="true" hidden>WI</div>
-      </div>
-    </div>
+
+      <button class="theme-toggle" id="themeToggle"
+        aria-label="Switch colour theme">☀️</button>
+    </nav>
   </header>
 
   <main>
-    <section id="about">
-      <div class="wrap">
-        <h2>About me</h2>
-        <p class="sec-intro">I am passionate about web and software development. I taught myself HTML, CSS and JavaScript, and I am learning Python and C at university.</p>
-        <div class="card">
-          <ul class="facts">
-            <li><b>Studying</b><span>Computer Science, Kibabii University (first year, graduating 2030)</span></li>
-            <li><b>Level</b><span>Junior, still improving</span></li>
-            <li><b>Based in</b><span>Bungoma County, Kenya</span></li>
-            <li><b>Languages</b><span>English and Kiswahili</span></li>
-          </ul>
-          <p class="honest">I use AI tools to help me build, and I am learning to guide them well. That is why prompt writing is one of my skills.</p>
-        </div>
-      </div>
-    </section>
+    <section class="hero section" id="home">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <p class="eyebrow">WELCOME TO MY DIGITAL SPACE</p>
+          <h1>Hi, I'm <span>Wesamba Innocent.</span></h1>
+          <h2>Full-Stack Developer & Creative Designer</h2>
+          <p class="hero-description">
+            I build digital experiences, create meaningful designs and
+            explore innovative ideas that bring people and technology together.
+          </p>
+          <p class="slogan">Building. Creating. Innovating.</p>
 
-    <section class="quote" aria-label="Personal motto">
-      <div class="wrap">
-        <blockquote>Do not wait until you feel ready. Build one small thing today, fix it tomorrow, and keep going until it becomes your skill.</blockquote>
-        <p>My motto as a growing developer</p>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="wrap">
-        <h2>Skills</h2>
-        <p class="sec-intro">Junior level and growing. These are the tools I use to build and ship.</p>
-        <div class="grid two">
-          <div class="card"><h3>Web development</h3><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div></div>
-          <div class="card"><h3>Programming</h3><div class="chips"><span class="chip">Python</span><span class="chip">C</span></div></div>
-          <div class="card"><h3>Tools and hosting</h3><div class="chips"><span class="chip">GitHub</span><span class="chip">Supabase</span><span class="chip">Vercel</span><span class="chip">Netlify</span></div></div>
-          <div class="card"><h3>Design and AI</h3><div class="chips"><span class="chip">Graphic design</span><span class="chip">Poster design in Canva</span><span class="chip">Photo editing</span><span class="chip">AI prompt writing</span></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="alt">
-      <div class="wrap">
-        <h2>Projects</h2>
-        <p class="sec-intro">What I have built so far, and what is coming next.</p>
-        <div class="grid three">
-          <article class="card">
-            <span class="tag live">Live</span><h3>StockFlow</h3>
-            <p>An inventory management web app that helps small and medium businesses keep track of their stock. Prices default to KSh.</p>
-            <p class="meta">React, Tailwind CSS, Supabase</p>
-            <div class="links"><a href="https://stockflow-wesamba.netlify.app/app#dashboard" target="_blank" rel="noopener noreferrer">Open StockFlow</a></div>
-          </article>
-          <article class="card">
-            <span class="tag progress">In progress</span><h3>JobConnect</h3>
-            <p>A jobs board where employers post work and people apply. I am still improving it, so some features are not finished.</p>
-            <p class="meta">HTML, CSS, JavaScript, Appwrite</p>
-            <div class="links">
-              <a href="https://wesambainnocent2401.github.io/Jobconnect/" target="_blank" rel="noopener noreferrer">Open JobConnect</a>
-              <a href="https://github.com/wesambainnocent2401/Jobconnect" target="_blank" rel="noopener noreferrer">GitHub</a>
-            </div>
-          </article>
-          <article class="card">
-            <span class="tag live">Live</span><h3>This portfolio</h3>
-            <p>My personal website with my resume, skills and projects, and an easy way to reach me.</p>
-            <p class="meta">HTML, CSS, JavaScript, GitHub, Netlify</p>
-            <div class="links"><a href="https://github.com/wesambainnocent2401" target="_blank" rel="noopener noreferrer">GitHub</a></div>
-          </article>
-        </div>
-        <h3 class="subheading">Coming up</h3>
-        <div class="next-list">
-          <div class="next-item"><span class="tag next">Planned</span><h3>School portal</h3><p>A portal for students and admins, built with Python Flask and SQLite.</p></div>
-          <div class="next-item"><span class="tag next">Planned</span><h3>Online marketplace</h3><p>A site where any seller can post products and any buyer can place an order.</p></div>
-          <div class="next-item"><span class="tag next">Planned</span><h3>IoT robot car</h3><p>An automated car robot powered by a Raspberry Pi and Python.</p></div>
-          <div class="next-item"><span class="tag next">Planned</span><h3>Home weather station</h3><p>Sensor readings from a Raspberry Pi shown on a web dashboard.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="hire">
-      <div class="wrap">
-        <h2>Hire me</h2>
-        <p class="sec-intro">Need something done? Choose a service to start an enquiry.</p>
-        <div class="grid three" id="services"></div>
-      </div>
-    </section>
-
-    <section id="designs" class="alt">
-      <div class="wrap">
-        <h2>Design gallery</h2>
-        <p class="sec-intro">Posters I designed in Canva, and photos I edited and cleaned up.</p>
-        <div class="gallery" id="gallery"></div>
-        <p class="gallery-empty" id="galleryEmpty" hidden>New designs are being added soon.</p>
-      </div>
-    </section>
-
-    <section id="testimonials">
-      <div class="wrap">
-        <h2>What people say</h2>
-        <p class="sec-intro">Words from people I have worked with.</p>
-        <div class="grid two" id="tList"></div>
-        <div class="card t-empty" id="tEmpty">
-          <h3>No reviews yet</h3>
-          <p>I am just starting out. If I have done work for you, I would love to hear how it went.</p>
-          <p class="review-link"><a class="btn btn-teal btn-sm" id="reviewBtn" href="#">Leave a review</a></p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="alt">
-      <div class="wrap">
-        <h2>Get in touch</h2>
-        <p class="sec-intro">Have a project, a job, or just want to say hi? Send me a message.</p>
-        <div class="contact-grid">
-          <div class="card">
-            <h3>Send a message</h3>
-            <form id="msgForm">
-              <div><label for="fname">Your name</label><input id="fname" name="name" type="text" autocomplete="name" required></div>
-              <div><label for="fmsg">Message</label><textarea id="fmsg" name="message" required></textarea></div>
-              <div class="row">
-                <button class="btn btn-teal" type="submit" data-via="whatsapp">Send on WhatsApp</button>
-                <button class="btn btn-line" type="submit" data-via="email">Send by email</button>
-              </div>
-            </form>
-            <p class="note">Your message opens in WhatsApp or your email app, ready for you to review and send.</p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn primary-btn">Explore My Work</a>
+            <a href="#contact" class="btn secondary-btn">Contact Me</a>
           </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="code-top">
+            <span></span><span></span><span></span>
+            <small>developer.js</small>
+          </div>
+          <pre><code>const developer = {
+  name: "Wesamba Innocent",
+  role: "Full-Stack Developer",
+  design: true,
+  creativity: true,
+  mindset: "Always Learning",
+  mission: "Build. Create. Innovate."
+};
+
+console.log("Welcome!");</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <p class="eyebrow">GET TO KNOW ME</p>
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-content">
           <div>
-            <div class="card contact-card">
-              <h3>Reach me</h3>
-              <ul class="contact-list">
-                <li>WhatsApp / call: <a id="waLink" href="#">Add a public contact number</a></li>
-                <li>Email: <a id="mailLink" href="#">Add a public contact email</a></li>
-                <li><a href="https://www.linkedin.com/in/wesamba-innocent-26070a409/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a></li>
-                <li><a href="https://www.facebook.com/61560791684169/subscribe/" target="_blank" rel="noopener noreferrer">Facebook page</a></li>
-                <li><a href="https://github.com/wesambainnocent2401" target="_blank" rel="noopener noreferrer">GitHub profile</a></li>
-              </ul>
-            </div>
-            <div class="card gift" id="gift">
-              <h3>Support my learning</h3>
-              <p>If my work helped you or you want to support my learning, thank you. Payment details can be added if appropriate.</p>
-              <p class="number" id="mpesaNumber">Not configured</p>
-            </div>
+            <h3>A developer with a creative mindset.</h3>
+            <p>
+              My name is Wesamba Innocent. I'm a Full-Stack Developer,
+              Creative Designer and Content Creator interested in building
+              useful digital solutions and creating engaging visual content.
+            </p>
+            <p>
+              I'm currently a first-year Computer Science student at
+              Kibabii University in Kenya. I'm continuously learning,
+              experimenting and improving my technical and creative skills.
+            </p>
+            <p>
+              Beyond coding, I enjoy graphic design, social media promotion,
+              digital advertising and content creation.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3>Quick Information</h3>
+            <p><strong>Name:</strong> Wesamba Innocent</p>
+            <p><strong>Location:</strong> Bungoma County, Kenya</p>
+            <p><strong>Education:</strong> Computer Science</p>
+            <p><strong>University:</strong> Kibabii University</p>
+            <p><strong>Expected graduation:</strong> 2030</p>
+            <p><strong>Interests:</strong> Technology, Design & Media</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section alternate" id="skills">
+      <div class="container">
+        <p class="eyebrow">WHAT I WORK WITH</p>
+        <h2 class="section-title">My Skills & Tools</h2>
+
+        <div class="skills-grid">
+          <article class="skill-card">
+            <div class="skill-icon">💻</div>
+            <h3>Web Development</h3>
+            <p>HTML, CSS and JavaScript</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">🎨</div>
+            <h3>Graphic Design</h3>
+            <p>Creative layouts and visual communication</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">✏️</div>
+            <h3>Canva</h3>
+            <p>Posters, flyers and social media graphics</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">🖌️</div>
+            <h3>Figma</h3>
+            <p>Interface design and visual prototyping</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">📱</div>
+            <h3>Social Media</h3>
+            <p>Digital promotion and content creation</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">🚀</div>
+            <h3>Creative Thinking</h3>
+            <p>Problem-solving and continuous learning</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <p class="eyebrow">SOME OF MY WORK</p>
+        <h2 class="section-title">Featured Projects</h2>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-placeholder">📦</div>
+            <div class="project-info">
+              <span class="project-type">PROJECT 01</span>
+              <h3>StockFlow</h3>
+              <p>
+                A project concept focused on stock and inventory management.
+                More project details and screenshots will be added soon.
+              </p>
+              <span class="tag">Inventory Management</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-placeholder">💼</div>
+            <div class="project-info">
+              <span class="project-type">PROJECT 02</span>
+              <h3>JobConnect</h3>
+              <p>
+                A project concept designed to connect people with
+                job opportunities and employment information.
+              </p>
+              <span class="tag">Employment Platform</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alternate" id="services">
+      <div class="container">
+        <p class="eyebrow">HOW I CAN HELP</p>
+        <h2 class="section-title">My Services</h2>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <span>🌐</span>
+            <h3>Website Design & Development</h3>
+            <p>Modern, responsive websites for individuals and businesses.</p>
+          </article>
+
+          <article class="service-card">
+            <span>🎨</span>
+            <h3>Graphic Design</h3>
+            <p>Creative posters, flyers, banners and promotional graphics.</p>
+          </article>
+
+          <article class="service-card">
+            <span>📢</span>
+            <h3>Social Media Promotion</h3>
+            <p>Promotional content and advertising for products and brands.</p>
+          </article>
+
+          <article class="service-card">
+            <span>🎬</span>
+            <h3>Content Creation</h3>
+            <p>Creative digital content for online audiences.</p>
+          </article>
+
+          <article class="service-card">
+            <span>🛠️</span>
+            <h3>Website Support</h3>
+            <p>Website updates, improvements and ongoing support.</p>
+          </article>
+        </div>
+
+        <p class="pricing-note">All services are priced by quotation.</p>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="container">
+        <p class="eyebrow">MY CREATIVE SPACE</p>
+        <h2 class="section-title">Design & Media Gallery</h2>
+        <p class="section-intro">
+          A space for my posters, flyers, creative designs, videos and audio.
+          My work will be added here as the portfolio grows.
+        </p>
+
+        <div class="gallery-grid">
+          <div class="gallery-placeholder">
+            <span>🖼️</span>
+            <p>Designs coming soon</p>
+          </div>
+          <div class="gallery-placeholder">
+            <span>🎥</span>
+            <p>Videos coming soon</p>
+          </div>
+          <div class="gallery-placeholder">
+            <span>🎵</span>
+            <p>Audio coming soon</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-content">
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h2 class="section-title">Have a Project in Mind?</h2>
+        <p>
+          Interested in working together, discussing an idea or learning
+          more about my services? Get in touch.
+        </p>
+
+        <div class="contact-buttons">
+          <a class="btn primary-btn" id="emailLink"
+             href="mailto:YOUR_EMAIL@example.com">Send Me an Email</a>
+
+          <a class="btn secondary-btn" id="whatsappLink"
+             href="https://wa.me/YOUR_WHATSAPP_NUMBER"
+             target="_blank" rel="noopener noreferrer">WhatsApp Me</a>
+        </div>
+
+        <p class="contact-note">
+          Replace the example email and WhatsApp number with your chosen
+          public business contact details before publishing.
+        </p>
       </div>
     </section>
   </main>
 
-  <footer><div class="wrap"><p>&copy; <span id="year"></span> Wesamba Innocent. Built with HTML, CSS and JavaScript.</p></div></footer>
+  <footer class="footer">
+    <div class="container">
+      <a href="#home" class="logo">WI<span>_DEV</span></a>
+      <p>Building. Creating. Innovating.</p>
+      <p>© <span id="year"></span> Wesamba Innocent. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
