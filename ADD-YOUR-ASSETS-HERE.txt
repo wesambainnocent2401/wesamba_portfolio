@@ -1,0 +1,1 @@
+Add profile.jpg, design1.png through design6.png, and resume.pdf to this folder.
